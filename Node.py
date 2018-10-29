@@ -125,22 +125,24 @@ class Node(object):
             we.append(self.password)
             self.next
         return(NG, we)    
+class main():    
     num = 0
     y = Node("", 0,next)
     x = Node("", 0,next)
     temp = Node("", 0, next)
     templ = []
-    with open('10-million-combos.txt','r') as f:
+    with open('10-million-combos.txt', 'r', encoding = "ISO-8859-1") as f:
             for word in f: 
                 P = word.split()
-                templ.append(P[1])
+                templ.append(P[0])
     y =  x.add(templ)    
     temp = y
-    #y.D()
+    Split = Node.Split()
     left, right = y.Split()
     p = []
     s = []
-    p, s = y.(mergeSort(left, right))
+    mergeSort = Node.mergesort()
+    p, s = y.mergeSort(left, right)
     while(num < 20):
         print(p[num])
         print(s[num])
